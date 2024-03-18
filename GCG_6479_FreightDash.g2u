@@ -1,0 +1,1228 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmDash..Create(BaseForm)
+Gui.frmDash..Caption("Customer Feight Rates 6479")
+Gui.frmDash..Size(15360,10800)
+Gui.frmDash..MinX(0)
+Gui.frmDash..MinY(0)
+Gui.frmDash..Position(0,0)
+Gui.frmDash..AlwaysOnTop(False)
+Gui.frmDash..FontName("Tahoma")
+Gui.frmDash..FontSize(8.25)
+Gui.frmDash..ControlBox(True)
+Gui.frmDash..MaxButton(True)
+Gui.frmDash..MinButton(True)
+Gui.frmDash..MousePointer(0)
+Gui.frmDash..Moveable(True)
+Gui.frmDash..Sizeable(True)
+Gui.frmDash..ShowInTaskBar(True)
+Gui.frmDash..TitleBar(True)
+Gui.frmDash..Event(UnLoad,frmDash_UnLoad)
+Gui.frmDash.GsGCFreight.Create(GsGridControl)
+Gui.frmDash.GsGCFreight.Enabled(True)
+Gui.frmDash.GsGCFreight.Visible(True)
+Gui.frmDash.GsGCFreight.Zorder(0)
+Gui.frmDash.GsGCFreight.Size(15165,8730)
+Gui.frmDash.GsGCFreight.Position(90,1485)
+Gui.frmDash.GsGCFreight.Anchor(15)
+Gui.frmDash.GsGCFreight.Event(CellValueChanged,GsGCFreight_CellValueChanged)
+Gui.frmDash.GsGCFreight.Event(RowCellClick,GsGCFreight_RowCellClick)
+Gui.frmDash.framePanel.Create(Frame)
+Gui.frmDash.framePanel.Enabled(True)
+Gui.frmDash.framePanel.Visible(True)
+Gui.frmDash.framePanel.Zorder(0)
+Gui.frmDash.framePanel.Size(5475,1155)
+Gui.frmDash.framePanel.Position(9675,210)
+Gui.frmDash.framePanel.Caption("")
+Gui.frmDash.framePanel.FontName("Tahoma")
+Gui.frmDash.framePanel.FontSize(8.25)
+Gui.frmDash.framePanel.Anchor(9)
+Gui.frmDash.lblPrice1.Create(Label,"Up to 3,500 lbs",True,1095,195,0,240,135,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblPrice1.BorderStyle(0)
+Gui.frmDash.lblPrice1.Parent("framePanel")
+Gui.frmDash.lblPrice2.Create(Label,"Up to 40,000 lbs",True,1185,195,0,240,480,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblPrice2.BorderStyle(0)
+Gui.frmDash.lblPrice2.Parent("framePanel")
+Gui.frmDash.lblPrice3.Create(Label,"Up to 73,000 lbs",True,1185,195,0,240,840,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblPrice3.BorderStyle(0)
+Gui.frmDash.lblPrice3.Parent("framePanel")
+Gui.frmDash.lblAddlChg1.Create(Label,"Add Flat Charge 1",True,1305,195,0,2850,120,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblAddlChg1.BorderStyle(0)
+Gui.frmDash.lblAddlChg1.Parent("framePanel")
+Gui.frmDash.lblAddlChg2.Create(Label,"Add Flat Charge 2",True,1305,195,0,2850,465,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblAddlChg2.BorderStyle(0)
+Gui.frmDash.lblAddlChg2.Parent("framePanel")
+Gui.frmDash.lblAddlChg3.Create(Label,"Add Flat Charge 3",True,1305,195,0,2850,795,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblAddlChg3.BorderStyle(0)
+Gui.frmDash.lblAddlChg3.Parent("framePanel")
+Gui.frmDash.txtPrice1.Create(TextBox,"",True,975,300,0,1815,45,False,0,"Tahoma",8.25,,1)
+Gui.frmDash.txtPrice1.Parent("framePanel")
+Gui.frmDash.txtPrice1.Event(LostFocus,panelChange)
+Gui.frmDash.txtPrice1.TabStop(True)
+Gui.frmDash.txtPrice1.TabIndex(1)
+Gui.frmDash.txtPrice1.NumericOnly(1)
+Gui.frmDash.txtPrice2.Create(TextBox,"",True,975,300,0,1815,390,False,0,"Tahoma",8.25,,1)
+Gui.frmDash.txtPrice2.Parent("framePanel")
+Gui.frmDash.txtPrice2.Event(LostFocus,panelChange)
+Gui.frmDash.txtPrice2.TabStop(True)
+Gui.frmDash.txtPrice2.TabIndex(2)
+Gui.frmDash.txtPrice2.NumericOnly(1)
+Gui.frmDash.txtPrice3.Create(TextBox,"",True,975,300,0,1815,735,False,0,"Tahoma",8.25,,1)
+Gui.frmDash.txtPrice3.Parent("framePanel")
+Gui.frmDash.txtPrice3.Event(LostFocus,panelChange)
+Gui.frmDash.txtPrice3.TabStop(True)
+Gui.frmDash.txtPrice3.TabIndex(3)
+Gui.frmDash.txtPrice3.NumericOnly(1)
+Gui.frmDash.txtAddlChg1.Create(TextBox,"",True,975,300,0,4275,15,False,0,"Tahoma",8.25,,1)
+Gui.frmDash.txtAddlChg1.Parent("framePanel")
+Gui.frmDash.txtAddlChg1.Event(LostFocus,panelChange)
+Gui.frmDash.txtAddlChg1.TabStop(True)
+Gui.frmDash.txtAddlChg1.TabIndex(6)
+Gui.frmDash.txtAddlChg1.NumericOnly(1)
+Gui.frmDash.txtAddlChg2.Create(TextBox,"",True,975,300,0,4275,360,False,0,"Tahoma",8.25,,1)
+Gui.frmDash.txtAddlChg2.Parent("framePanel")
+Gui.frmDash.txtAddlChg2.Event(LostFocus,panelChange)
+Gui.frmDash.txtAddlChg2.TabStop(True)
+Gui.frmDash.txtAddlChg2.TabIndex(7)
+Gui.frmDash.txtAddlChg2.NumericOnly(1)
+Gui.frmDash.txtAddlChg3.Create(TextBox,"",True,975,300,0,4275,705,False,0,"Tahoma",8.25,,1)
+Gui.frmDash.txtAddlChg3.Parent("framePanel")
+Gui.frmDash.txtAddlChg3.Event(LostFocus,panelChange)
+Gui.frmDash.txtAddlChg3.TabStop(True)
+Gui.frmDash.txtAddlChg3.TabIndex(8)
+Gui.frmDash.txtAddlChg3.NumericOnly(1)
+Gui.frmDash.ddlPlantLoc.Create(DropDownList)
+Gui.frmDash.ddlPlantLoc.Enabled(True)
+Gui.frmDash.ddlPlantLoc.Visible(True)
+Gui.frmDash.ddlPlantLoc.Zorder(0)
+Gui.frmDash.ddlPlantLoc.Size(1950,300)
+Gui.frmDash.ddlPlantLoc.Position(270,465)
+Gui.frmDash.ddlPlantLoc.FontName("Tahoma")
+Gui.frmDash.ddlPlantLoc.FontSize(8.25)
+Gui.frmDash.ddlPlantLoc.Event(Change,ddlPlantLoc_Change)
+Gui.frmDash.lblPlantLoc.Create(Label,"Plant Location",True,1005,195,0,270,165,True,0,"Tahoma",8.25,,0,0)
+Gui.frmDash.lblPlantLoc.BorderStyle(0)
+Gui.frmDash.txtNewPlant.Create(TextBox,"",True,1920,300,0,2655,540,True,0,"Tahoma",8.25,,1)
+Gui.frmDash.cmdNewPlant.Create(Button)
+Gui.frmDash.cmdNewPlant.Enabled(True)
+Gui.frmDash.cmdNewPlant.Visible(True)
+Gui.frmDash.cmdNewPlant.Zorder(0)
+Gui.frmDash.cmdNewPlant.Size(1125,345)
+Gui.frmDash.cmdNewPlant.Position(3045,960)
+Gui.frmDash.cmdNewPlant.Caption("Add Location")
+Gui.frmDash.cmdNewPlant.FontName("Tahoma")
+Gui.frmDash.cmdNewPlant.FontSize(8.25)
+Gui.frmDash.cmdNewPlant.Event(Click,cmdNewPlant_Click)
+Gui.frmEdit..Create(BaseForm)
+Gui.frmEdit..Caption("Edit Rate")
+Gui.frmEdit..Size(3390,2160)
+Gui.frmEdit..MinX(0)
+Gui.frmEdit..MinY(0)
+Gui.frmEdit..Position(0,0)
+Gui.frmEdit..AlwaysOnTop(False)
+Gui.frmEdit..FontName("Tahoma")
+Gui.frmEdit..FontSize(8.25)
+Gui.frmEdit..ControlBox(True)
+Gui.frmEdit..MaxButton(True)
+Gui.frmEdit..MinButton(True)
+Gui.frmEdit..MousePointer(0)
+Gui.frmEdit..Moveable(True)
+Gui.frmEdit..Sizeable(True)
+Gui.frmEdit..ShowInTaskBar(True)
+Gui.frmEdit..TitleBar(True)
+Gui.frmEdit..Event(UnLoad,frmEdit_UnLoad)
+Gui.frmEdit.txtEdit.Create(TextBox,"",True,1500,300,0,900,540,True,0,"Tahoma",8.25,,1)
+Gui.frmEdit.cmdSave.Create(Button)
+Gui.frmEdit.cmdSave.Enabled(True)
+Gui.frmEdit.cmdSave.Visible(True)
+Gui.frmEdit.cmdSave.Zorder(0)
+Gui.frmEdit.cmdSave.Size(1125,345)
+Gui.frmEdit.cmdSave.Position(1080,1065)
+Gui.frmEdit.cmdSave.Caption("Save")
+Gui.frmEdit.cmdSave.FontName("Tahoma")
+Gui.frmEdit.cmdSave.FontSize(8.25)
+Gui.frmEdit.cmdSave.Event(Click,cmdSave_Click)
+Gui.frmEdit.lblEditCaption.Create(Label,"Edit Rate for: ",True,1020,195,0,900,210,True,0,"Tahoma",8.25,,0,0)
+Gui.frmEdit.lblEditCaption.BorderStyle(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.bConOpen.Declare(Boolean, False)
+V.Global.bViewOnly.Declare(Boolean, False)
+V.Global.bFirstRun.Declare(Boolean, False)
+V.Global.bGridLoaded.Declare(Boolean, False)
+V.Global.sOrgPrices.Declare
+V.Global.sOrgAddlChgs.Declare
+V.Global.iSelectedRowIndex.Declare
+V.Global.sSelectedColumn.Declare
+V.Global.sCustomerOnScreen.Declare
+'Used for minimum amount needed to not be static. Set by customer 
+V.Global.iMinAmt1.Declare(Long, 100)
+V.Global.iMinAmt2.Declare(Long, 350)
+V.Global.iMinAmt3.Declare(Long, 600)
+'V.Global.iMinAmt4.Declare(Long, 800)
+'V.Global.iMinAmt5.Declare(Long, 1500)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Project: Freight Rate Dashboard 
+'Customer: United Tool & Mold 
+'Author: Brandon Medina 
+'Quote: 13041-0
+F.Intrinsic.Control.Try
+	'Set up hooks to make all controls view only if it's launched from script 3 button on Order Entry or Quote Header Screen 
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		'Set Script 3 Label: ORD200 11560 and Freight pop up screen 36310
+		F.Intrinsic.Control.Case(11560)
+			V.Passed.000203.Set("Freight Dash")
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.Case(36310)
+			V.Passed.000210.Set("Freight Dash")
+			F.Intrinsic.Control.End
+		'Activate Script 3 ORD200 and activate button 3 for Freight screen ORSFRT 36342
+		F.Intrinsic.Control.CaseAny(11930, 36342)
+			V.Global.bViewOnly.Set(True)
+		'Set customer number to global variable when freight button on either screen QTS0200A or OES0200A is pressed 
+		F.Intrinsic.Control.CaseAny(10900,11830)
+			V.Passed.GLOBAL.Set(V.Passed.000006.Trim)
+			F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.UI.InvokeWaitDialog("Loading Data...")
+	F.Intrinsic.Control.CallSub(loadData)
+	F.Intrinsic.UI.CloseWaitDialog
+	'Don't display grid since it will not have a location selected 
+	'F.Intrinsic.Control.CallSub(loadGrid)
+	F.Intrinsic.Control.If(V.Global.bViewOnly, =, False)
+		F.Intrinsic.Control.CallSub(setContextMenus)
+		Gui.frmDash..Show
+	F.Intrinsic.Control.Else
+	'Set all controls to be disabled. All grid events will have a check at the beginning of the subroutine to exit sub 
+		Gui.frmDash.ddlPlantLoc.Enabled(False)
+		Gui.frmDash.txtNewPlant.Enabled(False)
+		Gui.frmDash.cmdNewPlant.Enabled(False)
+		Gui.frmDash.txtAddlChg1.Enabled(False)
+		Gui.frmDash.txtAddlChg2.Enabled(False)
+		Gui.frmDash.txtAddlChg3.Enabled(False)
+		'Gui.frmDash.txtAddlChg4.Enabled(False)
+		'Gui.frmDash.txtAddlChg5.Enabled(False)
+		Gui.frmDash.txtPrice1.Enabled(False)
+		Gui.frmDash.txtPrice2.Enabled(False)
+		Gui.frmDash.txtPrice3.Enabled(False)
+		'Gui.frmDash.txtPrice4.Enabled(False)
+		'Gui.frmDash.txtPrice5.Enabled(False)
+		
+		Gui.frmDash..Show
+		F.Intrinsic.Control.CallSub(loadGrid)
+	F.Intrinsic.Control.EndIf
+'	Gui.frmDash..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry	
+Program.Sub.Main.End
+
+Program.Sub.ErrorMsg.Start
+V.Local.sError.Declare
+
+F.Intrinsic.Control.If(V.Global.bConOpen)
+	F.ODBC.Connection!con.Close
+F.Intrinsic.Control.EndIf	
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project GCG_6479_FreightDash.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.loadData.Start
+F.Intrinsic.Control.Try
+	V.Local.sSQL.Declare
+	V.Local.bExists.Declare
+	V.Local.i.Declare
+	V.Local.j.Declare(Long)
+	V.Local.k.Declare(Long)
+	V.Local.sLoc.Declare
+
+	'Check if custom table exists. Create if it doesn't 
+	F.ODBC.Connection!con.OpenCompanyConnection 
+	V.Global.bConOpen.Set(True)
+	F.ODBC.Connection!con.TableExists("GCG_6479_FREIGHT_RATES", V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists.Not)
+		'Will need to either have a unique ID created for each combo of PLANT + CUSTOMER or include address1 as part of the save process to distinguish between customers w multiple ship addresses 
+		'V.Local.sSQL.Set("create table GCG_6479_FREIGHT_RATES (PLANT CHAR(30), CUSTOMER CHAR(6), ADDRESS1 CHAR(30), MILES NUMERIC(6,2), UPTO35K_LBS NUMERIC(9, 2), UPTO35K_STATIC_FLAG CHAR(1), UPTO40K_LBS NUMERIC(9, 2), UPTO40K_STATIC_FLAG CHAR(1), UPTO55K_LBS NUMERIC(9, 2), UPTO55K_STATIC_FLAG CHAR(1), UPTO80K_LBS NUMERIC(9, 2), UPTO80K_STATIC_FLAG CHAR(1), UPTO80K_PLUS_LBS NUMERIC(9, 2), UPTO80K_PLUS_STATIC_FLAG CHAR(1));")
+		V.Local.sSQL.Set("create table GCG_6479_FREIGHT_RATES (PLANT CHAR(30), CUSTOMER CHAR(6), ADDRESS1 CHAR(30), MILES NUMERIC(6,2), LBS_1 NUMERIC(9, 2), STATIC_FLAG_1 CHAR(1), LBS_2 NUMERIC(9, 2), STATIC_FLAG_2 CHAR(1), LBS_3 NUMERIC(9, 2), STATIC_FLAG_3 CHAR(1));")
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	
+	'Read Locations from Other custom table to set drop down menu list 
+	'Check it exists first, create if it doesn't 
+	F.ODBC.Connection!con.TableExists("GCG_6479_PANEL_VALUES", V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists.Not)
+		'V.Local.sSQL.Set("create table GCG_6479_PANEL_VALUES (PLANT_LOCS CHAR(10), PRICE_1 NUMERIC(5, 2), PRICE_2 NUMERIC(5, 2), PRICE_3 NUMERIC(5, 2), PRICE_4 NUMERIC(5, 2), PRICE_5 NUMERIC(5, 2), ADDL_CHG_1 NUMERIC(6, 2), ADDL_CHG_2 NUMERIC(6, 2), ADDL_CHG_3 NUMERIC(6, 2), ADDL_CHG_4 NUMERIC(6, 2), ADDL_CHG_5 NUMERIC(6, 2))")
+		V.Local.sSQL.Set("create table GCG_6479_PANEL_VALUES (PLANT_LOCS CHAR(10), PRICE_1 NUMERIC(5, 2), PRICE_2 NUMERIC(5, 2), PRICE_3 NUMERIC(5, 2), ADDL_CHG_1 NUMERIC(6, 2), ADDL_CHG_2 NUMERIC(6, 2), ADDL_CHG_3 NUMERIC(6, 2))")
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.DataTable.dtFreightRates.Exists)
+		F.Data.DataTable.Close("dtFreightRates")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.DataTable.dtPanel.Exists)
+		F.Data.DataTable.Close("dtPanel")
+	F.Intrinsic.Control.EndIf
+	
+	V.Local.sSQL.Set("select * from GCG_6479_PANEL_VALUES")
+	F.Data.DataTable.CreateFromSQL("dtPanel", "con", V.Local.sSQL, True)
+	
+	'Join customer master to custom table entries to format into final result
+		'Get cartesian product of the plant locations for each customer from customer master and OE_MULTI_SHIP and union all them together (renaming the columns from the cross join with OE_MULT_SHIP) to get all possible combinations of plant locations and customers (including those with multiple addresses)
+	V.Local.sSQL.Set("select ltrim(rtrim(PA.PLANT_LOCS)) as PLANT_LOCS, ltrim(rtrim(CU.CUSTOMER)) as CUSTOMER, CU.NAME_CUSTOMER, ltrim(rtrim(CU.ADDRESS1)) as ADDRESS1, CU.CITY, CU.STATE, CU.ZIP from GCG_6479_PANEL_VALUES PA cross join V_CUSTOMER_MASTER CU union all select ltrim(rtrim(PA.PLANT_LOCS)) as PLANT_LOCS, ltrim(rtrim(OE.CUSTOMER)) as CUSTOMER, OE.CUSTOMER_NAME as NAME_CUSTOMER, ltrim(rtrim(OE.SHIP_ADDRESS1)) as ADDRESS1, OE.SHIP_CITY as CITY, OE.SHIP_STATE as STATE, OE.SHIP_ZIP as ZIP from V_OE_MULTI_SHIP OE cross join GCG_6479_PANEL_VALUES PA")
+	F.Data.DataTable.CreateFromSQL("dtAllCombos", "con", V.Local.sSQL)
+
+	'V.Local.sSQL.Set("select ltrim(rtrim(FR.PLANT)) as PLANT, ltrim(rtrim(FR.CUSTOMER)) as CUSTOMER, CU.NAME_CUSTOMER, ltrim(rtrim(FR.ADDRESS1)) as ADDRESS1, CU.CITY, CU.STATE, CU.ZIP, FR.MILES, FR.UPTO35K_LBS, FR.UPTO35K_STATIC_FLAG, FR.UPTO40K_LBS, FR.UPTO40K_STATIC_FLAG, FR.UPTO55K_LBS, FR.UPTO55K_STATIC_FLAG, FR.UPTO80K_LBS, FR.UPTO80K_STATIC_FLAG, FR.UPTO80K_PLUS_LBS, FR.UPTO80K_PLUS_STATIC_FLAG from GCG_6479_FREIGHT_RATES FR left join V_CUSTOMER_MASTER CU on CU.CUSTOMER = FR.CUSTOMER and CU.ADDRESS1 = FR.ADDRESS1")
+	V.Local.sSQL.Set("select ltrim(rtrim(FR.PLANT)) as PLANT, ltrim(rtrim(FR.CUSTOMER)) as CUSTOMER, CU.NAME_CUSTOMER, ltrim(rtrim(FR.ADDRESS1)) as ADDRESS1, CU.CITY, CU.STATE, CU.ZIP, FR.MILES, FR.LBS_1, FR.STATIC_FLAG_1, FR.LBS_2, FR.STATIC_FLAG_2, FR.LBS_3, FR.STATIC_FLAG_3 from GCG_6479_FREIGHT_RATES FR left join V_CUSTOMER_MASTER CU on CU.CUSTOMER = FR.CUSTOMER and CU.ADDRESS1 = FR.ADDRESS1")
+	F.Data.DataTable.CreateFromSQL("dtFreightInDB", "con", V.Local.sSQL)
+	
+	'Since some addresses originated from OE_MULTI_SHIP, create dictionaries using Address1 as the key and fill in the values for the rest of the shipping info. Union it to customer master so that the info already in the table does not get overwritten 
+	F.Data.Dictionary.CreateFromSQL("dictCustomerName", "con", "select ltrim(rtrim(SHIP_ADDRESS1)) as ADDRESS1, CUSTOMER_NAME as NAME_CUSTOMER from V_OE_MULTI_SHIP union select ltrim(rtrim(ADDRESS1)) as ADDRESS1, NAME_CUSTOMER from V_CUSTOMER_MASTER")
+	F.Data.Dictionary.CreateFromSQL("dictCity", "con", "select ltrim(rtrim(SHIP_ADDRESS1)) as ADDRESS1, SHIP_CITY as CITY from V_OE_MULTI_SHIP union select ltrim(rtrim(ADDRESS1)) as ADDRESS1, CITY from V_CUSTOMER_MASTER")
+	F.Data.Dictionary.CreateFromSQL("dictState", "con", "select ltrim(rtrim(SHIP_ADDRESS1)) as ADDRESS1, SHIP_STATE as STATE from V_OE_MULTI_SHIP union select ltrim(rtrim(ADDRESS1)) as ADDRESS1, STATE from V_CUSTOMER_MASTER")
+	F.Data.Dictionary.CreateFromSQL("dictZIP", "con", "select ltrim(rtrim(SHIP_ADDRESS1)) as ADDRESS1, SHIP_ZIP as ZIP from V_OE_MULTI_SHIP union select ltrim(rtrim(ADDRESS1)) as ADDRESS1, ZIP from V_CUSTOMER_MASTER")
+	
+	F.Data.Dictionary.SetDefaultReturn("dictCustomerName", "No Customer Name")
+	F.Data.Dictionary.SetDefaultReturn("dictCity", "No City")
+	F.Data.Dictionary.SetDefaultReturn("dictState", "No State")
+	F.Data.Dictionary.SetDefaultReturn("dictZIP", "No Zip")
+	
+	F.Data.DataTable.FillFromDictionary("dtFreightInDB", "dictCustomerName", "ADDRESS1", "NAME_CUSTOMER")
+	F.Data.DataTable.FillFromDictionary("dtFreightInDB", "dictCity", "ADDRESS1", "CITY")
+	F.Data.DataTable.FillFromDictionary("dtFreightInDB", "dictState", "ADDRESS1", "STATE")
+	F.Data.DataTable.FillFromDictionary("dtFreightInDB", "dictZIP", "ADDRESS1", "ZIP")
+	
+	F.Data.Dictionary.Close("dictCustomerName")
+	F.Data.Dictionary.Close("dictCity")
+	F.Data.Dictionary.Close("dictState")
+	F.Data.Dictionary.Close("dictZip")
+	
+	'Linq join to "replace" rows in the combos datatable that already exist in the custom db table, giving us what will be used in the grid control 
+	F.Data.Linq.Join("LeftJoin", "DataTable", "dtAllCombos*!*AC", "DataTable", "dtFreightInDB*!*FD", "AC.PLANT_LOCS = FD.PLANT AND AC.CUSTOMER = FD.CUSTOMER and AC.ADDRESS1 = FD.ADDRESS1", "AC.PLANT_LOCS as PLANT*!*AC.CUSTOMER*!*AC.NAME_CUSTOMER*!*AC.ADDRESS1*!*AC.CITY*!*AC.STATE*!*AC.ZIP*!*FD.MILES*!*FD.LBS_1*!*FD.STATIC_FLAG_1*!*FD.LBS_2*!*FD.STATIC_FLAG_2*!*FD.LBS_3*!*FD.STATIC_FLAG_3", , ,"AC.CUSTOMER", "dtFreightRates", True)
+	
+	F.Data.DataTable.Close("dtAllCombos")
+	F.Data.DataTable.Close("dtFreightInDB")
+
+	'Loop to read stored plant values and set them to drop box if it's running for the first time, otherwise skip as this will be added whenever new plant location is added  
+	F.Intrinsic.Control.If(V.Global.bViewOnly, =, False)
+		F.Intrinsic.Control.If(V.Global.bFirstRun.Not)
+			F.Intrinsic.Control.For(V.Local.i, 0, V.DataTable.dtPanel.RowCount--, 1)
+				V.Local.sLoc.Set(V.DataTable.dtPanel(V.Local.i).PLANT_LOCS!FieldValTrim)
+				Gui.frmDash.ddlPlantLoc.AddItem(V.Local.sLoc, V.Local.i)
+			F.Intrinsic.Control.Next(V.Local.i)
+			V.Global.bFirstRun.Set(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.Close
+	V.Global.bConOpen.Set(False)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.loadData.End
+Program.Sub.loadGrid.Start
+F.Intrinsic.Control.Try
+	V.Local.sInputColumn.Declare
+	V.Local.sOrdinals.Declare
+	V.Local.iColorColumn.Declare
+	V.Local.i.Declare
+	V.Local.j.Declare(Long)
+	V.Local.iColumn.Declare
+	V.Local.sFilter.Declare
+	
+	'Bind data table to grid 
+	Gui.frmDash..Enabled(False)
+	Gui.frmDash.GsGCFreight.Visible(False)
+	
+	F.Intrinsic.UI.InvokeWaitDialog("Formatting Grid...")
+	'Column of rate will be stored when user exits out of dashboard
+	'Set color column flags to invisible 
+	'Set column order
+	'Set Edit permissions for columns. Rate columns will be done individually by cell below. Check if being launched as view only 
+	'CellHAlignment_Center
+	
+	'Have for view only 
+	
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.If(V.Caller.Hook, =, 11930)
+			F.Intrinsic.Control.If(V.Passed.000006, =, "")
+				F.Intrinsic.UI.Msgbox("No Customer entered. Displaying all records.")
+				F.Data.DataView.Create("dtFreightRates", "dvFreightRates", 22)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("CUSTOMER='{0}'", V.Passed.000006.Trim, V.Local.sFilter)
+				F.Data.DataView.Create("dtFreightRates", "dvFreightRates", 22, V.Local.sFilter, "")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.ElseIf(V.Caller.Hook, =, 36342)
+			F.Intrinsic.Control.If(V.Passed.GLOBAL, =, "")
+				F.Intrinsic.UI.Msgbox("No Customer entered. Displaying all records.")
+				F.Data.DataView.Create("dtFreightRates", "dvFreightRates", 22)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("CUSTOMER='{0}'", V.Passed.GLOBAL.Trim, V.Local.sFilter)
+				F.Data.DataView.Create("dtFreightRates", "dvFreightRates", 22, V.Local.sFilter, "")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+'		F.Data.DataView.Create("dtFreightRates", "dvFreightRates", 22)
+		Gui.frmDash.GsGCFreight.AddGridviewFromDataview("gvMain", "dtFreightRates", "dvFreightRates")
+		Gui.frmDash.GsGCFreight.MainView("gvMain")
+		
+		'Feed Panel Table To set captions (except for price captions, since dashboard in view only will be showing all locations which can have differeing prices for each weight category)
+		'F.Intrinsic.String.Build("MILES@!@One-Way Miles,CUSTOMER@!@Customer No,NAME_CUSTOMER@!@Customer,ADDRESS1@!@Address,CITY@!@City,STATE@!@State,ZIP@!@Zip,LBS_1@!@{3}{0},LBS_2@!@{3}{1},LBS_3@!@{3}{2}", V.DataTable.dtPanel(0).PRICE_1!FieldValTrim, V.DataTable.dtPanel(0).PRICE_2!FieldValTrim, V.DataTable.dtPanel(0).PRICE_3!FieldValTrim, "$", V.Local.sInputColumn)
+		F.Intrinsic.String.Build("PLANT@!@Plant,MILES@!@One-Way Miles,CUSTOMER@!@Customer No,NAME_CUSTOMER@!@Customer,ADDRESS1@!@Address,CITY@!@City,STATE@!@State,ZIP@!@Zip,LBS_1@!@{0},LBS_2@!@{1},LBS_3@!@{2}", "Up to 3500 lbs", "Up to 40000 lbs", "Up to 73000 lbs", V.Local.sInputColumn)
+		
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", V.Local.sInputColumn, "sProperty", "Caption")
+		
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "STATIC_FLAG_1,STATIC_FLAG_2,STATIC_FLAG_3", "sProperty", "Invisible")
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "PLANT,MILES,CUSTOMER,NAME_CUSTOMER,ADDRESS1,CITY,STATE,ZIP,LBS_1,LBS_2,LBS_3", "sProperty", "VisibleIndex")
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "MILES,CUSTOMER,ADDRESS1,CITY,STATE,ZIP,STATIC_FLAG_1,STATIC_FLAG_2,STATIC_FLAG_3,PLANT,LBS_1,LBS_2,LBS_3", "sProperty", "EditNotAllowed")
+		'F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "PLANT,MILES,LBS_1,LBS_2,LBS_3", "sProperty", "CellHAlignment_Center")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "STATIC_FLAG_1,STATIC_FLAG_2,STATIC_FLAG_3,PLANT", "sProperty", "Invisible")
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "MILES,CUSTOMER,NAME_CUSTOMER,ADDRESS1,CITY,STATE,ZIP,LBS_1,LBS_2,LBS_3", "sProperty", "VisibleIndex")
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "CUSTOMER,ADDRESS1,CITY,STATE,ZIP,STATIC_FLAG_1,STATIC_FLAG_2,STATIC_FLAG_3,PLANT,LBS_1,LBS_2,LBS_3", "sProperty", "EditNotAllowed")
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "MILES", "sProperty","EditAllowed")
+		'F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "MILES", "sProperty", "CellHAlignment_Center")
+		'F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "LBS_1,LBS_2,LBS_3", "sProperty", "CellHAlignment_Left")
+		
+	F.Intrinsic.Control.EndIf
+	
+	'Set Captions
+	F.Intrinsic.Control.If(V.DataView.dtPanel!dvPanel.Exists)
+		'F.Intrinsic.String.Build("MILES@!@One-Way Miles,CUSTOMER@!@Customer No,NAME_CUSTOMER@!@Customer,ADDRESS1@!@Address,CITY@!@City,STATE@!@State,ZIP@!@Zip,LBS_1@!@{5}{0},LBS_2@!@{5}{1},LBS_3@!@{5}{2},UPTO80K_LBS@!@{5}{3},UPTO80K_PLUS_LBS@!@{5}{4}", V.DataView.dtPanel!dvPanel(0).PRICE_1!FieldValTrim, V.DataView.dtPanel!dvPanel(0).PRICE_2!FieldValTrim, V.DataView.dtPanel!dvPanel(0).PRICE_3!FieldValTrim, V.DataView.dtPanel!dvPanel(0).PRICE_4!FieldValTrim, V.DataView.dtPanel!dvPanel(0).PRICE_5!FieldValTrim, "$", V.Local.sInputColumn)
+		F.Intrinsic.String.Build("MILES@!@One-Way Miles,CUSTOMER@!@Customer No,NAME_CUSTOMER@!@Customer,ADDRESS1@!@Address,CITY@!@City,STATE@!@State,ZIP@!@Zip,LBS_1@!@{3}{0},LBS_2@!@{3}{1},LBS_3@!@{3}{2}", V.DataView.dtPanel!dvPanel(0).PRICE_1!FieldValTrim, V.DataView.dtPanel!dvPanel(0).PRICE_2!FieldValTrim, V.DataView.dtPanel!dvPanel(0).PRICE_3!FieldValTrim, "$", V.Local.sInputColumn)
+		F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", V.Local.sInputColumn, "sProperty", "Caption")
+	F.Intrinsic.Control.EndIf
+	
+	'F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", "CUSTOMER,ADDRESS1,CITY,STATE,ZIP,UPTO35K_STATIC_FLAG,UPTO40K_STATIC_FLAG,UPTO55K_STATIC_FLAG,UPTO80K_STATIC_FLAG,UPTO80K_PLUS_STATIC_FLAG,PLANT,UPTO35K_LBS,UPTO40K_LBS,UPTO55K_LBS,UPTO80K_LBS,UPTO80K_PLUS_LBS", "sProperty", "EditNotAllowed")
+	
+	'Set initial Coloring based on Static flag
+		'Iterate through each different distance breakdown bucket, grab ordinals of the 'Y' values
+		'Edit will be deterimined in own subroutine where it checks this status flag to decide if it should bring up the editor.
+			'Up to 35K miles Column 9 
+	F.Data.DataTable.Select("dtFreightRates", "STATIC_FLAG_1='Y'",V.Local.sOrdinals)
+	F.Intrinsic.Control.If(V.Local.sOrdinals, <>, "***NORETURN***")
+		F.Intrinsic.String.Split(V.Local.sOrdinals, "*!*", V.Local.sOrdinals)
+		Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "LBS_1", V.Local.iColumn)
+		
+		F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sOrdinals.UBound, 1)
+			Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Local.sOrdinals(V.Local.i), "BackColor", V.Color.SEC-GSS-05)
+		F.Intrinsic.Control.Next(V.Local.i)
+	F.Intrinsic.Control.EndIf
+ 		
+			'Up to 40K miles Column 12
+	F.Data.DataTable.Select("dtFreightRates", "STATIC_FLAG_2='Y'",V.Local.sOrdinals)
+	F.Intrinsic.Control.If(V.Local.sOrdinals, <>, "***NORETURN***")
+		F.Intrinsic.String.Split(V.Local.sOrdinals, "*!*", V.Local.sOrdinals)
+		Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "LBS_2", V.Local.iColumn)
+		
+		F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sOrdinals.UBound, 1)
+			Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Local.sOrdinals(V.Local.i), "BackColor", V.Color.SEC-GSS-05)
+		F.Intrinsic.Control.Next(V.Local.i)
+	F.Intrinsic.Control.EndIf
+	
+'			'Up to 55K miles column 15
+	F.Data.DataTable.Select("dtFreightRates", "STATIC_FLAG_3='Y'",V.Local.sOrdinals)
+	F.Intrinsic.Control.If(V.Local.sOrdinals, <>, "***NORETURN***")
+		F.Intrinsic.String.Split(V.Local.sOrdinals, "*!*", V.Local.sOrdinals)
+		Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "LBS_3", V.Local.iColumn)
+		
+		F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sOrdinals.UBound, 1)
+			Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Local.sOrdinals(V.Local.i), "BackColor", V.Color.SEC-GSS-05)
+		F.Intrinsic.Control.Next(V.Local.i)
+	F.Intrinsic.Control.EndIf
+				
+			'Up to 80K miles column 18
+'	F.Data.DataTable.Select("dtFreightRates", "UPTO80K_STATIC_FLAG='Y'",V.Local.sOrdinals)
+'	F.Intrinsic.Control.If(V.Local.sOrdinals, <>, "***NORETURN***")
+'		F.Intrinsic.String.Split(V.Local.sOrdinals, "*!*", V.Local.sOrdinals)
+'		Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "UPTO80K_LBS", V.Local.iColumn)
+'		
+'		F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sOrdinals.UBound, 1)
+'			Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Local.sOrdinals(V.Local.i), "BackColor", V.Color.SEC-GSS-05)
+'		F.Intrinsic.Control.Next(V.Local.i)
+'	F.Intrinsic.Control.EndIf
+	
+			'Up to 80K plus miles column 21
+'	F.Data.DataTable.Select("dtFreightRates", "UPTO80K_PLUS_STATIC_FLAG='Y'",V.Local.sOrdinals)
+'	F.Intrinsic.Control.If(V.Local.sOrdinals, <>, "***NORETURN***")
+'		F.Intrinsic.String.Split(V.Local.sOrdinals, "*!*", V.Local.sOrdinals)
+'		Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "UPTO80K_PLUS_LBS", V.Local.iColumn)
+'		
+'		F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sOrdinals.UBound, 1)
+'			Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Local.sOrdinals(V.Local.i), "BackColor", V.Color.SEC-GSS-05)
+'		F.Intrinsic.Control.Next(V.Local.i)
+'	F.Intrinsic.Control.EndIf
+
+	Gui.frmDash.GsGCFreight.Visible(True)
+	F.Intrinsic.UI.CloseWaitDialog
+	Gui.frmDash..Enabled(True)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.loadGrid.End
+Program.Sub.ddlPlantLoc_Change.Start
+F.Intrinsic.Control.Try
+	V.Local.sFilter.Declare
+	V.Local.bExists.Declare
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.BlockEvents
+
+	F.Intrinsic.Control.If(V.DataView.dtPanel!dvPanel.Exists)
+		F.Data.DataView.Close("dtPanel", "dvPanel")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.DataView.dtFreightRates!dvFreightRates.Exists, =, False)
+		'Create filtering for dataview for panel 
+		F.Intrinsic.String.Build("PLANT='{0}'", V.Screen.frmDash!ddlPlantLoc.Text.Trim, V.Local.sFilter)
+		F.Data.DataView.Create("dtFreightRates", "dvFreightRates", 22, V.Local.sFilter, "")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.frmDash!ddlPlantLoc.Text, <>, "")
+'		Gui.frmDash.GsGCFreight.SuspendLayout
+		F.Intrinsic.Control.If(V.Global.bGridLoaded)
+			'Update filtering for dataview for main grid rates
+			F.Intrinsic.String.Build("PLANT='{0}'", V.Screen.frmDash!ddlPlantLoc.Text.Trim, V.Local.sFilter)
+			F.Data.DataView.SetFilter("dtFreightRates", "dvFreightRates", V.Local.sFilter)
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.String.Build("PLANT_LOCS='{0}'", V.Screen.frmDash!ddlPlantLoc.Text.Trim, V.Local.sFilter)
+		F.Data.DataView.Create("dtPanel", "dvPanel", 22, V.Local.sFilter, "")
+	
+		Gui.frmDash.txtPrice1.Text(V.DataView.dtPanel!dvPanel(0).PRICE_1!FieldValTrim)
+		Gui.frmDash.txtPrice2.Text(V.DataView.dtPanel!dvPanel(0).PRICE_2!FieldValTrim)
+		Gui.frmDash.txtPrice3.Text(V.DataView.dtPanel!dvPanel(0).PRICE_3!FieldValTrim)
+		'Gui.frmDash.txtPrice4.Text(V.DataView.dtPanel!dvPanel(0).PRICE_4!FieldValTrim)
+		'Gui.frmDash.txtPrice5.Text(V.DataView.dtPanel!dvPanel(0).PRICE_5!FieldValTrim)
+		
+		Gui.frmDash.txtAddlChg1.Text(V.DataView.dtPanel!dvPanel(0).ADDL_CHG_1!FieldValTrim)
+		Gui.frmDash.txtAddlChg2.Text(V.DataView.dtPanel!dvPanel(0).ADDL_CHG_2!FieldValTrim)
+		Gui.frmDash.txtAddlChg3.Text(V.DataView.dtPanel!dvPanel(0).ADDL_CHG_3!FieldValTrim)
+		'Gui.frmDash.txtAddlChg4.Text(V.DataView.dtPanel!dvPanel(0).ADDL_CHG_4!FieldValTrim)
+		'Gui.frmDash.txtAddlChg5.Text(V.DataView.dtPanel!dvPanel(0).ADDL_CHG_5!FieldValTrim)
+		
+		Gui.frmDash.txtPrice1.Enabled(True)
+		Gui.frmDash.txtPrice2.Enabled(True)
+		Gui.frmDash.txtPrice3.Enabled(True)
+		'Gui.frmDash.txtPrice4.Enabled(True)
+		'Gui.frmDash.txtPrice5.Enabled(True)
+		Gui.frmDash.txtAddlChg1.Enabled(True)
+		Gui.frmDash.txtAddlChg2.Enabled(True)
+		Gui.frmDash.txtAddlChg3.Enabled(True)
+		'Gui.frmDash.txtAddlChg4.Enabled(True)
+		'Gui.frmDash.txtAddlChg5.Enabled(True)
+		
+		'Set global variables to compare to later in the panelChange Subroutine 
+		'compare a single delimited string for each types of txtbox values 
+		
+		'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Screen.frmDash!txtPrice4.Text.Trim, V.Screen.frmDash!txtPrice5.Text.Trim, V.Global.sOrgPrices)
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Global.sOrgPrices)
+		'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", V.Screen.frmDash!txtAddlChg1.Text.Trim, V.Screen.frmDash!txtAddlChg2.Text.Trim, V.Screen.frmDash!txtAddlChg3.Text.Trim, V.Screen.frmDash!txtAddlChg4.Text.Trim, V.Screen.frmDash!txtAddlChg5.Text.Trim, V.Global.sOrgAddlChgs)
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Screen.frmDash!txtAddlChg1.Text.Trim, V.Screen.frmDash!txtAddlChg2.Text.Trim, V.Screen.frmDash!txtAddlChg3.Text.Trim, V.Global.sOrgAddlChgs)
+		
+		F.Intrinsic.Control.If(V.Global.bGridLoaded, =, False)
+			Gui.frmDash.GsGCFreight.AddGridviewFromDataview("gvMain", "dtFreightRates", "dvFreightRates")
+			Gui.frmDash.GsGCFreight.MainView("gvMain")
+			F.Intrinsic.Control.CallSub(loadGrid)
+			V.Global.bGridLoaded.Set(True)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.CallSub(updatePricesLabels)
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Else
+		Gui.frmDash.txtPrice1.Text("")
+		Gui.frmDash.txtPrice2.Text("")
+		Gui.frmDash.txtPrice3.Text("")
+		'Gui.frmDash.txtPrice4.Text("")
+		'Gui.frmDash.txtPrice5.Text("")
+		
+		Gui.frmDash.txtAddlChg1.Text("")
+		Gui.frmDash.txtAddlChg2.Text("")
+		Gui.frmDash.txtAddlChg3.Text("")
+		'Gui.frmDash.txtAddlChg4.Text("")
+		'Gui.frmDash.txtAddlChg5.Text("")
+		
+		Gui.frmDash.txtPrice1.Enabled(False)
+		Gui.frmDash.txtPrice2.Enabled(False)
+		Gui.frmDash.txtPrice3.Enabled(False)
+		'Gui.frmDash.txtPrice4.Enabled(False)
+		'Gui.frmDash.txtPrice5.Enabled(False)
+		Gui.frmDash.txtAddlChg1.Enabled(False)
+		Gui.frmDash.txtAddlChg2.Enabled(False)
+		Gui.frmDash.txtAddlChg3.Enabled(False)
+		'Gui.frmDash.txtAddlChg4.Enabled(False)
+		'Gui.frmDash.txtAddlChg5.Enabled(False)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.ddlPlantLoc_Change.End
+
+Program.Sub.frmDash_UnLoad.Start
+'Save info on screen
+F.Intrinsic.Control.End
+
+Program.Sub.frmDash_UnLoad.End
+Program.Sub.panelChange.Start
+F.Intrinsic.Control.Try
+	V.Local.sSQL.Declare
+	V.Local.sPriceChange.Declare
+	V.Local.sChgChange.Declare
+	V.Local.i.Declare
+	V.Local.j.Declare(Long)
+	V.Local.sVariableLiteral.Declare
+	V.Local.sVariableLiteralAddl.Declare
+	V.Local.sTemp.Declare
+	V.Local.sMultipliedValues.Declare
+	V.Local.bExists.Declare
+	V.Local.iDictValue.Declare
+	V.Local.sFieldMap.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'Will be attached to lost focus event on any of the 6 txtboxes
+	F.Intrinsic.Control.BlockEvents
+		'Build up delimited string for comparing to original strings 
+		'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Screen.frmDash!txtPrice4.Text.Trim, V.Screen.frmDash!txtPrice5.Text.Trim, V.Local.sPriceChange)
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Local.sPriceChange)
+		'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", V.Screen.frmDash!txtAddlChg1.Text.Trim, V.Screen.frmDash!txtAddlChg2.Text.Trim, V.Screen.frmDash!txtAddlChg3.Text.Trim, V.Screen.frmDash!txtAddlChg4.Text.Trim, V.Screen.frmDash!txtAddlChg5.Text.Trim, V.Local.sChgChange)
+		F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Screen.frmDash!txtAddlChg1.Text.Trim, V.Screen.frmDash!txtAddlChg2.Text.Trim, V.Screen.frmDash!txtAddlChg3.Text.Trim, V.Local.sChgChange)
+		
+		F.Intrinsic.Control.If(V.Local.sPriceChange, <>, V.Global.sOrgPrices, OR, V.Local.sChgChange, <>, V.Global.sOrgAddlChgs)
+			
+			F.ODBC.Connection!con.OpenCompanyConnection
+			V.Global.bConOpen.Set(True)
+			
+			'Multiply new values out and set them to data view/table and to custom db table 
+			'V.Local.sMultipliedValues.Redim(1, 5)
+
+			F.Data.Dictionary.Exists("dictFlags", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictFlags")
+				F.Data.Dictionary.AddItem("dictFlags", "TXTPRICE1", "STATIC_FLAG_1")
+				F.Data.Dictionary.AddItem("dictFlags", "TXTPRICE2", "STATIC_FLAG_2")
+				F.Data.Dictionary.AddItem("dictFlags", "TXTPRICE3", "STATIC_FLAG_3")
+				'F.Data.Dictionary.AddItem("dictFlags", "TXTPRICE4", "UPTO80K_STATIC_FLAG")
+				'F.Data.Dictionary.AddItem("dictFlags", "TXTPRICE5", "UPTO80K_PLUS_STATIC_FLAG")
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.Dictionary.Exists("dictColumns", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictColumns")
+				F.Data.Dictionary.AddItem("dictColumns", "TXTPRICE1", "LBS_1")
+				F.Data.Dictionary.AddItem("dictColumns", "TXTPRICE2", "LBS_2")
+				F.Data.Dictionary.AddItem("dictColumns", "TXTPRICE3", "LBS_3")
+				'F.Data.Dictionary.AddItem("dictColumns", "TXTPRICE4", "UPTO80K_LBS")
+				'F.Data.Dictionary.AddItem("dictColumns", "TXTPRICE5", "UPTO80K_PLUS_LBS")
+			F.Intrinsic.Control.EndIf
+			
+			'Connects each txtprice name to its corresponding txtextrachg and vice versa 
+			F.Data.Dictionary.Exists("dictTxtMap", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictTxtMap")
+				F.Data.Dictionary.AddItem("dictTxtMap", "TXTPRICE1", "TXTADDLCHG1")
+				F.Data.Dictionary.AddItem("dictTxtMap", "TXTPRICE2", "TXTADDLCHG2")
+				F.Data.Dictionary.AddItem("dictTxtMap", "TXTPRICE3", "TXTADDLCHG3")
+				'F.Data.Dictionary.AddItem("dictTxtMap", "TXTPRICE4", "TXTADDLCHG4")
+				'F.Data.Dictionary.AddItem("dictTxtMap", "TXTPRICE5", "TXTADDLCHG5")
+				
+				F.Data.Dictionary.AddItem("dictTxtMap", "TXTADDLCHG1", "TXTPRICE1")
+				F.Data.Dictionary.AddItem("dictTxtMap", "TXTADDLCHG2", "TXTPRICE2")
+				F.Data.Dictionary.AddItem("dictTxtMap", "TXTADDLCHG3", "TXTPRICE3")
+				'F.Data.Dictionary.AddItem("dictTxtMap", "TXTADDLCHG4", "TXTPRICE4")
+				'F.Data.Dictionary.AddItem("dictTxtMap", "TXTADDLCHG5", "TXTPRICE5")
+			F.Intrinsic.Control.EndIf
+			
+			'Maps out text box control, to the index of the column it should be multiplying out 
+			F.Data.Dictionary.Exists("dictColumnIndex", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictColumnIndex")
+				
+				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "LBS_1", V.Local.iDictValue)
+				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTPRICE1", V.Local.iDictValue)
+				'Don't forget addl charge columns 
+				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTADDLCHG1", V.Local.iDictValue)
+				
+				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "LBS_2", V.Local.iDictValue)
+				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTPRICE2", V.Local.iDictValue)
+				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTADDLCHG2", V.Local.iDictValue)
+				
+				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "LBS_3", V.Local.iDictValue)
+				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTPRICE3", V.Local.iDictValue)
+				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTADDLCHG3", V.Local.iDictValue)
+				
+'				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "UPTO80K_LBS", V.Local.iDictValue)
+'				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTPRICE4", V.Local.iDictValue)
+'				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTADDLCHG1", V.Local.iDictValue)
+				
+'				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", "UPTO80K_PLUS_LBS", V.Local.iDictValue)
+'				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTPRICE5", V.Local.iDictValue)
+'				F.Data.Dictionary.AddItem("dictColumnIndex", "TXTADDLCHG1", V.Local.iDictValue)
+			F.Intrinsic.Control.EndIf
+			
+			'j dictates which column index in the grid corresponding to the changed freight rate weight category is being updated, while the i variable in the loop iterates through each row in the dataview
+			V.Local.j.Set(V.Dictionary.dictColumnIndex![V.Args.ControlName])
+			
+			F.Intrinsic.Control.For(V.Local.i, 0, V.DataView.dtFreightRates!dvFreightRates.RowCount--, 1)
+				'F.Intrinsic.Control.For(V.Local.j, 1, 5, 1)
+				'See which txtbox launched the subroutine, start by multiplying/grabbing txtprice value
+				F.Intrinsic.Control.If(V.Args.ControlName.Left8, =, "TXTPRICE")
+					F.Intrinsic.String.Build("{0}", V.Args.ControlName, V.Local.sVariableLiteral)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}", V.Dictionary.dictTxtMap![V.Args.ControlName], V.Local.sVariableLiteral)
+				F.Intrinsic.Control.EndIf
+				
+'					'Don't multiply if cell's flag is set to static 
+				F.Intrinsic.Control.If(V.DataView.dtFreightRates!dvFreightRates(V.Local.i).[V.Dictionary.dictFlags![V.Local.sVariableLiteral]]!FieldValTrim, =, "Y")
+					'Keep the same 
+					V.Local.sMultipliedValues.Set(V.DataView.dtFreightRates!dvFreightRates(V.Local.i).[V.Dictionary.dictColumns![V.Local.sVariableLiteral]]!FieldValTrim)
+				F.Intrinsic.Control.Else
+					'multiply rate per mile by miles and then by 2
+					F.Intrinsic.Math.Mult(V.DataView.dtFreightRates!dvFreightRates(V.Local.i).MILES!FieldValTrim, V.Screen.frmDash![V.Local.sVariableLiteral].Text, 2, V.Local.sTemp)
+					'Use column index dictionary to grab the number at the end. txtprice1 should have txtaddlchg1 go along with it
+					'Grab corresponding addl charge to add to that previous number
+					F.Intrinsic.Control.If(V.Args.ControlName.Left10, =, "TXTADDLCHG")
+						F.Intrinsic.String.Build("{0}", V.Args.ControlName, V.Local.sVariableLiteralAddl)
+					F.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("{0}", V.Dictionary.dictTxtMap![V.Args.ControlName], V.Local.sVariableLiteralAddl)
+					F.Intrinsic.Control.EndIf
+
+					F.Intrinsic.Math.Add(V.Local.sTemp, V.Screen.frmDash![V.Local.sVariableLiteralAddl].Text, V.Local.sMultipliedValues)
+				F.Intrinsic.Control.EndIf
+				
+				'Change values for that row and column (cell )in the dataview 
+				'Only change the cell on the row the loop is currently on for the column that corresponds to the txt box changed in the panel 
+				F.Data.DataView.SetValue("dtFreightRates", "dvFreightRates", V.Local.i, V.Dictionary.dictColumns![V.Local.sVariableLiteral], V.Local.sMultipliedValues)
+			F.Intrinsic.Control.Next(V.Local.i)
+			
+			'Set global variable for prices and addlchg to compare to next time 
+			'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Screen.frmDash!txtPrice4.Text.Trim, V.Screen.frmDash!txtPrice5.Text.Trim, V.Global.sOrgPrices)
+			F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Global.sOrgPrices)
+			'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}", V.Screen.frmDash!txtAddlChg1.Text.Trim, V.Screen.frmDash!txtAddlChg2.Text.Trim, V.Screen.frmDash!txtAddlChg3.Text.Trim, V.Screen.frmDash!txtAddlChg4.Text.Trim, V.Screen.frmDash!txtAddlChg5.Text.Trim, V.Global.sOrgAddlChgs)
+			F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Screen.frmDash!txtAddlChg1.Text.Trim, V.Screen.frmDash!txtAddlChg2.Text.Trim, V.Screen.frmDash!txtAddlChg3.Text.Trim, V.Global.sOrgAddlChgs)
+			
+			'Update prices in panel data view/ data table, and commit changes to custom db table 
+			F.Intrinsic.String.Split(V.Local.sPriceChange, "*!*", V.Local.sPriceChange)
+			F.Intrinsic.String.Split(V.Local.sChgChange, "*!*", V.Local.sChgChange)
+			
+			'F.Data.DataView.SetValue("dtPanel", "dvPanel", 0, "PRICE_1", V.Local.sPriceChange(0), "PRICE_2", V.Local.sPriceChange(1), "PRICE_3", V.Local.sPriceChange(2), "PRICE_4", V.Local.sPriceChange(3), "PRICE_5", V.Local.sPriceChange(4), "ADDL_CHG_1", V.Local.sChgChange(0), "ADDL_CHG_2", V.Local.sChgChange(1), "ADDL_CHG_3", V.Local.sChgChange(2), "ADDL_CHG_4", V.Local.sChgChange(3), "ADDL_CHG_5", V.Local.sChgChange(4))
+			F.Data.DataView.SetValue("dtPanel", "dvPanel", 0, "PRICE_1", V.Local.sPriceChange(0), "PRICE_2", V.Local.sPriceChange(1), "PRICE_3", V.Local.sPriceChange(2), "ADDL_CHG_1", V.Local.sChgChange(0), "ADDL_CHG_2", V.Local.sChgChange(1), "ADDL_CHG_3", V.Local.sChgChange(2))
+
+			F.Data.DataTable.SaveToDB("dtPanel", "con", "GCG_6479_PANEL_VALUES", "PLANT_LOCS", 256)
+			
+			'Have some columns in this datatable that are not in the db custom table. left those out of field map
+			'Only update the one column that had its corresponding panel value changed 
+				'Bulid up FieldMap w just the column of the changed panel value
+			F.Intrinsic.String.Build("PLANT@!@PLANT*!*CUSTOMER@!@CUSTOMER*!*ADDRESS1@!@ADDRESS1*!*{0}@!@{0}", V.Dictionary.dictColumns![V.Local.sVariableLiteral], V.Local.sFieldMap)
+			F.Intrinsic.UI.InvokeWaitDialog("Writing Records to DB. Please wait...")
+				'Create datatable copy from the dataview and use that to save to db to avoid saving all entries from all locations 
+			F.Data.DataView.ToDataTable("dtFreightRates", "dvFreightRates", "dtUpdate", True)
+			F.Data.DataTable.SaveToDB("dtUpdate", "con", "GCG_6479_FREIGHT_RATES", "PLANT*!*CUSTOMER*!*ADDRESS1", 256, V.Local.sFieldMap)
+			F.Intrinsic.UI.CloseWaitDialog
+			F.ODBC.Connection!con.Close
+			V.Global.bConOpen.Set(False)
+			F.Data.Dictionary.Close("dictColumns")
+			F.Data.Dictionary.Close("dictFlags")
+			F.Data.Dictionary.Close("dictColumnIndex")
+			F.Data.Dictionary.Close("dictTxtMap")
+			F.Data.DataTable.Close("dtUpdate")
+			'Update Captions to reflect changes 
+			F.Intrinsic.Control.CallSub(updatePricesLabels)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.UnBlockEvents
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.UnBlockEvents
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.panelChange.End
+Program.Sub.cmdNewPlant_Click.Start
+F.Intrinsic.Control.Try
+	V.Local.sPlantToAdd.Declare
+	V.Local.sSQL.Declare
+	V.Local.sFilter.Declare
+	V.Local.sMessage.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	V.Local.sPlantToAdd.Set(V.Screen.frmDash!txtNewPlant.Text.Trim)
+	F.Intrinsic.Control.If(V.Local.sPlantToAdd, =, "")
+		F.Intrinsic.UI.Msgbox("Location cannot be blank.")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection
+	V.Global.bConOpen.Set(True)
+	
+	'Write new location record, checking first that it does not already exist 
+	F.Intrinsic.String.Build("PLANT_LOCS='{0}'", V.Local.sPlantToAdd, V.Local.sFilter)
+	F.Data.DataView.Create("dtPanel", "dvPanelCheck", 22, V.Local.sFilter, "")
+	F.Intrinsic.Control.If(V.DataView.dtPanel!dvPanelCheck.RowCount, >, 0)
+		F.Intrinsic.String.Build("Plant Location: {0}, already exists.", V.Local.sPlantToAdd, V.Local.sMessage)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage, "Warning: Duplicate Plant Location Entry")
+		F.Data.DataView.Close("dtPanel", "dvPanelCheck")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'F.Intrinsic.String.Build("insert into GCG_6479_PANEL_VALUES (PLANT_LOCS, PRICE_1, PRICE_2, PRICE_3, PRICE_4, PRICE_5, ADDL_CHG_1, ADDL_CHG_2, ADDL_CHG_3, ADDL_CHG_4, ADDL_CHG_5) values ('{0}', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00')", V.Screen.frmDash!txtNewPlant.Text.Trim, V.Local.sSQL)
+	F.Intrinsic.String.Build("insert into GCG_6479_PANEL_VALUES (PLANT_LOCS, PRICE_1, PRICE_2, PRICE_3, ADDL_CHG_1, ADDL_CHG_2, ADDL_CHG_3) values ('{0}', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00')", V.Screen.frmDash!txtNewPlant.Text.Trim, V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	
+	F.ODBC.Connection!con.Close
+	V.Global.bConOpen.Set(False)
+	
+	'Reset field and add to drop down list. Recreate Main tables. Update grid view by setting gridNotloaded bool false
+	Gui.frmDash.ddlPlantLoc.AddItem(V.Screen.frmDash!txtNewPlant.Text.Trim)
+	Gui.frmDash.txtNewPlant.Text("")
+	V.Global.bGridLoaded.Set(False)
+	F.Intrinsic.Control.CallSub(LoadData)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdNewPlant_Click.End
+
+Program.Sub.formatBulk.Start
+F.Intrinsic.Control.Try
+	V.Local.i.Declare
+	V.Local.sColumns.Declare
+	V.Local.sCaptions.Declare
+	
+	F.Intrinsic.String.Split(V.Args.sInputColumns, ",", V.Local.sColumns)
+	F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sColumns.UBound, 1)
+		F.Intrinsic.Control.SelectCase(V.Args.sProperty)
+			F.Intrinsic.Control.Case("Invisible")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "Visible", False)
+			F.Intrinsic.Control.Case("VisibleIndex")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "VisibleIndex", V.Local.i)
+			F.Intrinsic.Control.Case("Caption")
+				F.Intrinsic.String.Split(V.Local.sColumns(V.Local.i), "@!@", V.Local.sCaptions)
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sCaptions(0), "Caption", V.Local.sCaptions(1))
+			F.Intrinsic.Control.Case("CellHAlignment_Center")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "CellHAlignment", Center)
+			F.Intrinsic.Control.Case("CellHAlignment_Left")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "CellHAlignment", Left)
+			F.Intrinsic.Control.Case("Decimal_2")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "DisplayCustomNumeric", "#######")
+			F.Intrinsic.Control.Case("EditAllowed")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "AllowEdit", True)
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "ReadOnly", False)
+			F.Intrinsic.Control.Case("EditNotAllowed")
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "AllowEdit", False)
+				Gui.frmDash.[V.Args.GsGC].SetColumnProperty(V.Args.GV, V.Local.sColumns(V.Local.i), "ReadOnly", True)	
+		F.Intrinsic.Control.EndSelect
+	F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.formatBulk.End
+
+Program.Sub.updatePricesLabels.Start
+F.Intrinsic.Control.Try
+	V.Local.sInputColumn.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'F.Intrinsic.String.Build("LBS_1@!@{5}{0},LBS_2@!@{5}{1},LBS_3@!@{5}{2},UPTO80K_LBS@!@{5}{3},UPTO80K_PLUS_LBS@!@{5}{4}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, V.Screen.frmDash!txtPrice4.Text.Trim, V.Screen.frmDash!txtPrice5.Text.Trim, "$", V.Local.sInputColumn)
+	F.Intrinsic.String.Build("LBS_1@!@{3}{0},LBS_2@!@{3}{1},LBS_3@!@{3}{2}", V.Screen.frmDash!txtPrice1.Text.Trim, V.Screen.frmDash!txtPrice2.Text.Trim, V.Screen.frmDash!txtPrice3.Text.Trim, "$", V.Local.sInputColumn)
+	F.Intrinsic.Control.CallSub(formatBulk, "GsGC", "GsGCFreight", "GV", "gvMain", "sInputColumns", V.Local.sInputColumn, "sProperty", "Caption")
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.updatePricesLabels.End
+
+Program.Sub.updateColoring.Start
+F.Intrinsic.Control.Try
+	V.Local.sOrdinals.Declare
+	V.Local.sRow.Declare
+	V.Local.iColumn.Declare
+	V.Local.bExists.Declare
+
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+'	V.Local.sRow.Set(V.Args.RowIndex)
+'	V.Local.sColumn.Set(V.Args.ColumnIndex)
+	F.Intrinsic.Control.BlockEvents
+	
+	F.Data.Dictionary.Exists("dictFlags", V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists)
+		F.Data.Dictionary.Close("dictFlags")
+	F.Intrinsic.Control.EndIf
+	
+	'Update color, change edit permissions, update flag in datatable > save to db table 
+	F.Intrinsic.Control.SelectCase(V.Global.sSelectedColumn)
+		F.Intrinsic.Control.CaseAny("LBS_1", "LBS_2", "LBS_3")
+			F.Data.Dictionary.Create("dictFlags")
+			F.Data.Dictionary.AddItem("dictFlags", "LBS_1", "STATIC_FLAG_1")
+			F.Data.Dictionary.AddItem("dictFlags", "LBS_2", "STATIC_FLAG_2")
+			F.Data.Dictionary.AddItem("dictFlags", "LBS_3", "STATIC_FLAG_3")
+			'F.Data.Dictionary.AddItem("dictFlags", "UPTO80K_LBS", "UPTO80K_STATIC_FLAG")
+			'F.Data.Dictionary.AddItem("dictFlags", "UPTO80K_PLUS_LBS", "UPTO80K_PLUS_STATIC_FLAG")
+			
+			Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", V.Dictionary.dictFlags![V.Global.sSelectedColumn], V.Local.iColumn)
+			
+			F.Intrinsic.Control.If(V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).[V.Dictionary.dictFlags![V.Global.sSelectedColumn]]!FieldValTrim, =, "Y")
+				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", V.Global.sSelectedColumn, V.Local.iColumn)
+				Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Global.iSelectedRowIndex, "BackColor", "")
+				F.Data.DataTable.SetValue("dtFreightRates", V.Global.iSelectedRowIndex, V.Dictionary.dictFlags![V.Global.sSelectedColumn], "")
+			F.Intrinsic.Control.Else
+				Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", V.Global.sSelectedColumn, V.Local.iColumn)
+				Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Global.iSelectedRowIndex, "BackColor", V.Color.SEC-GSS-05)
+				F.Data.DataTable.SetValue("dtFreightRates", V.Global.iSelectedRowIndex, V.Dictionary.dictFlags![V.Global.sSelectedColumn], "Y")
+			F.Intrinsic.Control.EndIf
+			
+			F.ODBC.Connection!con.OpenCompanyConnection
+			V.Global.bConOpen.Set(True)
+			
+			'Create new datatable, copy over the row that was modified, save that to db to avoid saving entire table to db 
+			F.Intrinsic.Control.If(V.DataTable.dtUpdate.Exists)
+				F.Data.DataTable.Close("dtUpdate")
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.DataTable.Clone("dtFreightRates", "dtUpdate", True)
+			'F.Data.DataTable.AddRow("dtUpdate", "PLANT", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).PLANT!FieldValTrim, "CUSTOMER", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).CUSTOMER!FieldValTrim, "ADDRESS1", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).ADDRESS1!FieldValTrim, "MILES", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).MILES!FieldValTrim, "LBS_1", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).LBS_1!FieldValTrim, "UPTO35K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO35K_STATIC_FLAG!FieldValTrim, "LBS_2", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).LBS_2!FieldValTrim, "UPTO40K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO40K_STATIC_FLAG!FieldValTrim, "LBS_3", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).LBS_3!FieldValTrim, "UPTO55K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO55K_STATIC_FLAG!FieldValTrim, "UPTO80K_LBS", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO80K_LBS!FieldValTrim, "UPTO80K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO80K_STATIC_FLAG!FieldValTrim, "UPTO80K_PLUS_LBS", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO80K_PLUS_LBS!FieldValTrim, "UPTO80K_PLUS_STATIC_FLAG", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).UPTO80K_PLUS_STATIC_FLAG!FieldValTrim)
+			F.Data.DataTable.AddRow("dtUpdate", "PLANT", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).PLANT!FieldValTrim, "CUSTOMER", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).CUSTOMER!FieldValTrim, "ADDRESS1", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).ADDRESS1!FieldValTrim, "MILES", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).MILES!FieldValTrim, "LBS_1", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).LBS_1!FieldValTrim, "STATIC_FLAG_1", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).STATIC_FLAG_1!FieldValTrim, "LBS_2", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).LBS_2!FieldValTrim, "STATIC_FLAG_2", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).STATIC_FLAG_2!FieldValTrim, "LBS_3", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).LBS_3!FieldValTrim, "STATIC_FLAG_3", V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).STATIC_FLAG_3!FieldValTrim)
+			
+			F.Data.DataTable.SaveToDB("dtUpdate", "con", "GCG_6479_FREIGHT_RATES", "PLANT*!*CUSTOMER*!*ADDRESS1", 256, "PLANT@!@PLANT*!*CUSTOMER@!@CUSTOMER*!*ADDRESS1@!@ADDRESS1*!*STATIC_FLAG_1@!@STATIC_FLAG_1*!*STATIC_FLAG_2@!@STATIC_FLAG_2*!*STATIC_FLAG_3@!@STATIC_FLAG_3")
+			F.ODBC.Connection!con.Close
+			V.Global.bConOpen.Set(False)
+			
+			F.Data.DataTable.Close("dtUpdate")
+			F.Data.Dictionary.Close("dictFlags")
+		F.Intrinsic.Control.CaseElse
+			F.Intrinsic.UI.Msgbox("Either no cell or an invalid one was selected")
+			F.Intrinsic.Control.UnBlockEvents
+			F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.UnBlockEvents
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.updateColoring.End
+
+Program.Sub.setContextMenus.Start
+F.Intrinsic.Control.Try
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	Gui.frmDash..ContextMenuCreate("ctxColor")
+	'Have it come up on only the relevant cells with right click on the rowcellclick event 
+	'Gui.frmDash.GsGCFreight.ContextMenuAttach("ctxColor")
+	Gui.frmDash..ContextMenuAddItem("ctxColor", "MakeStatic",0, "Toggle Static Cell")
+	Gui.frmDash..ContextMenuSetItemEventHandler("ctxColor", "MakeStatic", "updateColoring")
+	
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.setContextMenus.End
+Program.Sub.GsGCFreight_CellValueChanged.Start
+F.Intrinsic.Control.Try
+	V.Local.sRow.Declare
+	V.Local.sRowValues.Declare
+	V.Local.sSQL.Declare
+	V.Local.sTemp.Declare
+	V.Local.sMultipliedValues.Declare
+	V.Local.i.Declare
+	V.Local.j.Declare(Long)
+	V.Local.k.Declare(Long)
+	V.Local.iOriginalValueIndex.Declare
+	V.Local.sRowIndex.Declare
+	V.Local.sVariableLiteral.Declare
+	V.Local.bExists.Declare
+	V.Local.sFilter.Declare
+	V.Local.iMiles.Declare
+	V.Local.iLBS_1.Declare
+	V.Local.iLBS_2.Declare
+	V.Local.iLBS_3.Declare
+	'V.Local.iUpTo80K_Lbs.Declare
+	'V.Local.iUpTo80K_Plus_Lbs.Declare
+	V.Local.sUpdatedFlags.Declare
+	V.Local.iColumn.Declare
+	
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'Subroutine will read in the current row selected as an array. Determine if it needs to multiplied by the new one way miles entered, and SavetoDB to add or update miles/ freight rate values in the db custom table
+	Gui.frmDash.GsGCFreight.GetSelectedRowsInFocus(V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow, "*!*", V.Local.sRow)
+	Gui.frmDash.GsGCFreight.GetRowValues("gvMain", V.Local.sRow(0), V.Local.sRowValues)
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+		F.Intrinsic.Control.Case("MILES")
+			V.Local.sRowIndex.Set(V.Args.RowIndex)
+			
+			'Build update array, get rid of the extra columns not needed in custom db table 
+			F.Intrinsic.String.Split(V.Local.sRowValues, "*!*", V.Local.sRowValues)
+			'***OLD COMMENT*** RowValues Indices> 0:Plant 1:Customer 2:Miles 3-12 alternate between UPTOxxK_LBS and its static flag column 
+			'F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}*!*{10}*!*{11}*!*{12}", V.Local.sRowValues(0).Trim, V.Local.sRowValues(1).Trim, V.Local.sRowValues(7).Trim, V.Local.sRowValues(8).Trim, V.Local.sRowValues(9).Trim, V.Local.sRowValues(10).Trim, V.Local.sRowValues(11).Trim, V.Local.sRowValues(12).Trim, V.Local.sRowValues(13).Trim, V.Local.sRowValues(14).Trim, V.Local.sRowValues(15).Trim, V.Local.sRowValues(16).Trim, V.Local.sRowValues(17).Trim, V.Local.sRowValues)
+			'RowValues Indices> 0:Plant 1:Customer 2: Customer Name 3: Address 4: City 5: State 6: Zip 7: Miles 8-13 alternate between LBS and its STATIC_FLAG column 
+			F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}", V.Local.sRowValues(0).Trim, V.Local.sRowValues(1).Trim, V.Local.sRowValues(7).Trim, V.Local.sRowValues(8).Trim, V.Local.sRowValues(9).Trim, V.Local.sRowValues(10).Trim, V.Local.sRowValues(11).Trim, V.Local.sRowValues(12).Trim, V.Local.sRowValues(13).Trim, V.Local.sRowValues)
+		
+			F.Intrinsic.String.Split(V.Local.sRowValues, "*!*", V.Local.sRowValues)
+			
+			F.ODBC.Connection!con.OpenCompanyConnection
+			V.Global.bConOpen.Set(True)
+	
+			'Apply multiplication to all cells that are not locked, multiply by 2 (since this is one way miles) before adding additional charge 
+				'Indices 3, 5, 7, 9, 11 contain values to replace
+				'Index 2 -> One way miles 
+			V.Local.sMultipliedValues.Redim(0, 2)
+			V.Local.k.Set(4)
+			V.Local.iOriginalValueIndex.Set(3)
+			V.Local.sUpdatedFlags.Redim(0, 4)
+			
+			F.Data.Dictionary.Exists("dictFlags", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictFlags")
+				F.Data.Dictionary.AddItem("dictFlags", "txtPrice1", "STATIC_FLAG_1")
+				F.Data.Dictionary.AddItem("dictFlags", "txtPrice2", "STATIC_FLAG_2")
+				F.Data.Dictionary.AddItem("dictFlags", "txtPrice3", "STATIC_FLAG_3")
+				'F.Data.Dictionary.AddItem("dictFlags", "txtPrice4", "UPTO80K_STATIC_FLAG")
+				'F.Data.Dictionary.AddItem("dictFlags", "txtPrice5", "UPTO80K_PLUS_STATIC_FLAG")
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.Dictionary.Exists("dictColumns", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictColumns")
+				F.Data.Dictionary.AddItem("dictColumns", "txtPrice1", "LBS_1")
+				F.Data.Dictionary.AddItem("dictColumns", "txtPrice2", "LBS_2")
+				F.Data.Dictionary.AddItem("dictColumns", "txtPrice3", "LBS_3")
+				'F.Data.Dictionary.AddItem("dictColumns", "txtPrice4", "UPTO80K_LBS")
+				'F.Data.Dictionary.AddItem("dictColumns", "txtPrice5", "UPTO80K_PLUS_LBS")
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.Dictionary.Exists("dictColumnNumbers", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictColumnNumbers")
+				F.Data.Dictionary.AddItem("dictColumnNumbers", "0", "LBS_1")
+				F.Data.Dictionary.AddItem("dictColumnNumbers", "1", "LBS_2")
+				F.Data.Dictionary.AddItem("dictColumnNumbers", "2", "LBS_3")
+				'F.Data.Dictionary.AddItem("dictColumnNumbers", "3", "UPTO80K_LBS")
+				'F.Data.Dictionary.AddItem("dictColumnNumbers", "4", "UPTO80K_PLUS_LBS")
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.Dictionary.Exists("dictMinimums", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictMinimums")
+				F.Data.Dictionary.AddItem("dictMinimums", "0", V.Global.iMinAmt1)
+				F.Data.Dictionary.AddItem("dictMinimums", "1", V.Global.iMinAmt2)
+				F.Data.Dictionary.AddItem("dictMinimums", "2", V.Global.iMinAmt3)
+				'F.Data.Dictionary.AddItem("dictMinimums", "3", V.Global.iMinAmt4)
+				'F.Data.Dictionary.AddItem("dictMinimums", "4", V.Global.iMinAmt5)
+			F.Intrinsic.Control.EndIf
+			
+		'Checks which cells should not be multiplied
+			'i loop goes through Each price column (1-3)
+			'j used to set multiplied values to index 0-2
+			'k used to grab static flag values in sRowValues to see if the cell should be multiplied. Starts at 4, increments by 2
+			F.Intrinsic.Control.For(V.Local.i, 1, 3, 1)		
+				F.Intrinsic.Control.If(V.Local.sRowValues(V.Local.k), =, "Y")
+					'Cell set to static, keep original value
+					V.Local.sMultipliedValues(V.Local.j).Set(V.Local.sRowValues(V.Local.iOriginalValueIndex))
+				F.Intrinsic.Control.Else
+					'Cell not static, multiply out 
+					F.Intrinsic.String.Build("txtPrice{0}", V.Local.i, V.Local.sVariableLiteral)
+					F.Intrinsic.Math.Mult(V.Local.sRowValues(2), V.Screen.frmDash![V.Local.sVariableLiteral].Text, 2, V.Local.sTemp)
+					
+					F.Intrinsic.String.Build("txtAddlChg{0}", V.Local.i, V.Local.sVariableLiteral)
+					F.Intrinsic.Math.Add(V.Local.sTemp, V.Screen.frmDash![V.Local.sVariableLiteral].Text, V.Local.sMultipliedValues(V.Local.j))
+					
+					'Add check to see if multiplied values go over the minimum, if not, mark as a static cell 
+					F.Intrinsic.Control.If(V.Local.sMultipliedValues(V.Local.j), <=, V.Dictionary.dictMinimums![V.Local.j])
+						V.Local.sUpdatedFlags(V.Local.j).Set("Y")
+						'Set cell to the minimum 
+						V.Local.sMultipliedValues(V.Local.j).Set(V.Dictionary.dictMinimums![V.Local.j])
+						Gui.frmDash.GsGCFreight.GetColumnIndexByName("gvMain", V.Dictionary.dictColumnNumbers![V.Local.j], V.Local.iColumn)
+						Gui.frmDash.GsGCFreight.SetCellAppearance("gvMain", V.Local.iColumn, V.Local.sRowIndex, "BackColor", V.Color.SEC-GSS-05)
+					F.Intrinsic.Control.Else
+						V.Local.sUpdatedFlags(V.Local.j).Set("")
+						'No need to set color, as that will already be white by default
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+				
+				V.Local.j.Set(V.Local.j.++)
+				F.Intrinsic.Math.Add(V.Local.k, 2, V.Local.k)
+			F.Intrinsic.Control.Next(V.Local.i)
+			
+			F.Data.Dictionary.Close("dictColumns")
+			F.Data.Dictionary.Close("dictFlags")
+			F.Data.Dictionary.Close("dictMinimums")
+			F.Data.Dictionary.Close("dictColumnNumbers")
+			
+			'Change underlying datatable/dataview
+			'Include static flag changes 
+			'F.Data.DataTable.SetValue("dtFreightRates", V.Local.sRowIndex, "LBS_1", V.Local.sMultipliedValues(0), "LBS_2", V.Local.sMultipliedValues(1), "LBS_3", V.Local.sMultipliedValues(2), "UPTO80K_LBS", V.Local.sMultipliedValues(3), "UPTO80K_PLUS_LBS", V.Local.sMultipliedValues(4), "UPTO35K_STATIC_FLAG", V.Local.sUpdatedFlags(0), "UPTO40K_STATIC_FLAG", V.Local.sUpdatedFlags(1), "UPTO55K_STATIC_FLAG", V.Local.sUpdatedFlags(2), "UPTO80K_STATIC_FLAG", V.Local.sUpdatedFlags(3), "UPTO80K_PLUS_STATIC_FLAG", V.Local.sUpdatedFlags(4))
+			F.Data.DataTable.SetValue("dtFreightRates", V.Local.sRowIndex, "LBS_1", V.Local.sMultipliedValues(0), "LBS_2", V.Local.sMultipliedValues(1), "LBS_3", V.Local.sMultipliedValues(2), "STATIC_FLAG_1", V.Local.sUpdatedFlags(0), "STATIC_FLAG_2", V.Local.sUpdatedFlags(1), "STATIC_FLAG_3", V.Local.sUpdatedFlags(2))
+			
+			'Create new datatable, copy over the row that was modified, save that to db to avoid saving entire table to db 
+			F.Intrinsic.Control.If(V.DataTable.dtUpdate.Exists)
+				F.Data.DataTable.Close("dtUpdate")
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.DataTable.Clone("dtFreightRates", "dtUpdate", True)
+			
+			'Data type issues doing it this way since db expects decimal and gab retrieves values as strings. Manually set those values to floats
+			V.Local.iLBS_1.Set(V.DataTable.dtFreightRates(V.Local.sRowIndex).LBS_1!FieldValTrim)
+			V.Local.iLBS_2.Set(V.DataTable.dtFreightRates(V.Local.sRowIndex).LBS_2!FieldValTrim)
+			V.Local.iLBS_3.Set(V.DataTable.dtFreightRates(V.Local.sRowIndex).LBS_3!FieldValTrim)
+			'V.Local.iUpTo80K_Lbs.Set(V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO80K_LBS!FieldValTrim)
+			'V.Local.iUpTo80K_Plus_Lbs.Set(V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO80K_PLUS_LBS!FieldValTrim)
+			
+			'F.Data.DataTable.AddRow("dtUpdate", "PLANT", V.DataTable.dtFreightRates(V.Local.sRowIndex).PLANT!FieldValTrim, "CUSTOMER", V.DataTable.dtFreightRates(V.Local.sRowIndex).CUSTOMER!FieldValTrim, "ADDRESS1", V.DataTable.dtFreightRates(V.Local.sRowIndex).ADDRESS1!FieldValTrim, "MILES", V.DataTable.dtFreightRates(V.Local.sRowIndex).MILES!FieldValTrim, "LBS_1", V.Local.iLBS_1, "UPTO35K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO35K_STATIC_FLAG!FieldValTrim, "LBS_2", V.Local.iLBS_2, "UPTO40K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO40K_STATIC_FLAG!FieldValTrim, "LBS_3", V.Local.iLBS_3, "UPTO55K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO55K_STATIC_FLAG!FieldValTrim, "UPTO80K_LBS", V.Local.iUpTo80K_Lbs, "UPTO80K_STATIC_FLAG", V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO80K_STATIC_FLAG!FieldValTrim, "UPTO80K_PLUS_LBS", V.Local.iUpTo80K_Plus_Lbs, "UPTO80K_PLUS_STATIC_FLAG", V.DataTable.dtFreightRates(V.Local.sRowIndex).UPTO80K_PLUS_STATIC_FLAG!FieldValTrim)
+			F.Data.DataTable.AddRow("dtUpdate", "PLANT", V.DataTable.dtFreightRates(V.Local.sRowIndex).PLANT!FieldValTrim, "CUSTOMER", V.DataTable.dtFreightRates(V.Local.sRowIndex).CUSTOMER!FieldValTrim, "ADDRESS1", V.DataTable.dtFreightRates(V.Local.sRowIndex).ADDRESS1!FieldValTrim, "MILES", V.DataTable.dtFreightRates(V.Local.sRowIndex).MILES!FieldValTrim, "LBS_1", V.Local.iLBS_1, "STATIC_FLAG_1", V.DataTable.dtFreightRates(V.Local.sRowIndex).STATIC_FLAG_1!FieldValTrim, "LBS_2", V.Local.iLBS_2, "STATIC_FLAG_2", V.DataTable.dtFreightRates(V.Local.sRowIndex).STATIC_FLAG_2!FieldValTrim, "LBS_3", V.Local.iLBS_3, "STATIC_FLAG_3", V.DataTable.dtFreightRates(V.Local.sRowIndex).STATIC_FLAG_3!FieldValTrim)
+
+			F.Data.DataTable.SaveToDB("dtUpdate", "con", "GCG_6479_FREIGHT_RATES", "PLANT*!*CUSTOMER*!*ADDRESS1", 256, "PLANT@!@PLANT*!*CUSTOMER@!@CUSTOMER*!*ADDRESS1@!@ADDRESS1*!*MILES@!@MILES*!*LBS_1@!@LBS_1*!*LBS_2@!@LBS_2*!*LBS_3@!@LBS_3*!*STATIC_FLAG_1@!@STATIC_FLAG_1*!*STATIC_FLAG_2@!@STATIC_FLAG_2*!*STATIC_FLAG_3@!@STATIC_FLAG_3")
+			'F.Data.DataView.Close("dtFreightRates", "dvUpdate")
+			F.Data.DataTable.Close("dtUpdate")
+			
+			'Unmatched data type error using savetodb. Inserting/updating records manually
+'			F.Intrinsic.String.Build("select count(PLANT) from GCG_6479_FREIGHT_RATES where PLANT = '{0}' and CUSTOMER = '{1}'", V.Local.sRowValues(0), V.Local.sRowValues(1), V.Local.sSQL)
+'			F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL, V.Local.sTemp)
+'			F.Intrinsic.Control.If(V.Local.sTemp, =, 1)
+'				F.Intrinsic.String.Build("update GCG_6479_FREIGHT_RATES set MILES = '{2}', UPTO35K_LBS = '{3}', UPTO35K_STATIC_FLAG = '{4}', UPTO40K_LBS = '{5}', UPTO40K_STATIC_FLAG = '{6}', UPTO55K_LBS = '{7}', UPTO55K_STATIC_FLAG = '{8}', UPTO80K_LBS = '{9}', UPTO80K_STATIC_FLAG = '{10}', UPTO80K_PLUS_LBS = '{11}', UPTO80K_PLUS_STATIC_FLAG = '{12}' where PLANT = '{0}' and CUSTOMER = '{1}'", V.Local.sRowValues(0), V.Local.sRowValues(1), V.Local.sRowValues(2), V.Local.sMultipliedValues(0), V.Local.sRowValues(4), V.Local.sMultipliedValues(1), V.Local.sRowValues(6), V.Local.sMultipliedValues(2), V.Local.sRowValues(8), V.Local.sMultipliedValues(3), V.Local.sRowValues(10), V.Local.sMultipliedValues(4), V.Local.sRowValues(12), V.Local.sSQL)
+'				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+'			F.Intrinsic.Control.ElseIf(V.Local.sTemp, =, 0)
+'				F.Intrinsic.String.Build("insert into GCG_6479_FREIGHT_RATES (PLANT, CUSTOMER, MILES, UPTO35K_LBS, UPTO35K_STATIC_FLAG, UPTO40K_LBS, UPTO40K_STATIC_FLAG, UPTO55K_LBS, UPTO55K_STATIC_FLAG, UPTO80K_LBS, UPTO80K_STATIC_FLAG, UPTO80K_PLUS_LBS, UPTO80K_PLUS_STATIC_FLAG) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}')", V.Local.sRowValues(0), V.Local.sRowValues(1), V.Local.sRowValues(2), V.Local.sMultipliedValues(0), V.Local.sRowValues(4), V.Local.sMultipliedValues(1), V.Local.sRowValues(6), V.Local.sMultipliedValues(2), V.Local.sRowValues(8), V.Local.sMultipliedValues(3), V.Local.sRowValues(10), V.Local.sMultipliedValues(4), V.Local.sRowValues(12), V.Local.sSQL)
+'				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+'			F.Intrinsic.Control.Else
+'				F.Intrinsic.String.Build("Custom table GCG_6479_FREIGHT_RATES has duplicate records for the same location '{0}'. {1}Please contact Global Shop to clear up duplicates.", V.Local.sRowValues(0), V.Ambient.NewLine, V.Local.sTemp)
+'				F.Intrinsic.UI.Msgbox(V.Local.sTemp, "Error")
+'			F.Intrinsic.Control.EndIf
+			
+			F.ODBC.Connection!con.Close
+			V.Global.bConOpen.Set(False)
+			
+	F.Intrinsic.Control.EndSelect
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGCFreight_CellValueChanged.End
+Program.Sub.GsGCFreight_RowCellClick.Start
+F.Intrinsic.Control.Try
+	V.Local.sCellValue.Declare
+	V.Local.iX.Declare
+	V.Local.iY.Declare
+	V.Local.bExists.Declare
+	V.Local.sMsg.Declare
+
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	'Add right click handling to set static state. Display only on the cells that should have this toggle on	
+	F.Intrinsic.Control.If(V.Args.Button.UCase.UCase, =, "RIGHT")
+		F.Intrinsic.Control.If(V.Args.RowIndex, <>, -1)
+			'Get mouse pos 
+			F.Intrinsic.API.GetMousePosition(V.Local.iX, V.Local.iY)
+			F.Intrinsic.Control.SelectCase(V.Args.Column)
+				F.Intrinsic.Control.CaseAny("LBS_1", "LBS_2", "LBS_3")
+					V.Global.iSelectedRowIndex.Set(V.Args.RowIndex)
+					V.Global.sSelectedColumn.Set(V.Args.Column.Trim)
+			
+				Gui.frmDash..ContextMenuShow("ctxColor", V.Local.iX, V.Local.iY)
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndSelect
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	'Check if freight rate cell is marked as static. if so then bring up form to allow edit, otherwise don't 
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.CaseAny("LBS_1", "LBS_2", "LBS_3")
+			F.Data.Dictionary.Exists("dictFlags", V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists, =, False)
+				F.Data.Dictionary.Create("dictFlags")
+				F.Data.Dictionary.AddItem("dictFlags", "LBS_1", "STATIC_FLAG_1")
+				F.Data.Dictionary.AddItem("dictFlags", "LBS_2", "STATIC_FLAG_2")
+				F.Data.Dictionary.AddItem("dictFlags", "LBS_3", "STATIC_FLAG_3")
+				'F.Data.Dictionary.AddItem("dictFlags", "UPTO80K_LBS", "UPTO80K_STATIC_FLAG")
+				'F.Data.Dictionary.AddItem("dictFlags", "UPTO80K_PLUS_LBS", "UPTO80K_PLUS_STATIC_FLAG")
+			F.Intrinsic.Control.EndIf
+			
+			V.Global.iSelectedRowIndex.Set(V.Args.RowIndex)
+			V.Global.sSelectedColumn.Set(V.Args.Column.Trim)
+			
+			F.Intrinsic.Control.If(V.DataTable.dtFreightRates(V.Global.iSelectedRowIndex).[V.Dictionary.dictFlags![V.Global.sSelectedColumn]]!FieldValTrim, =, "Y")
+				Gui.frmDash.GsGCFreight.GetCellValueByColumnName("gvMain", V.Args.Column, V.Args.RowIndex, V.Local.sCellValue)
+				Gui.frmEdit.txtEdit.Text(V.Local.sCellValue.Trim)
+				Gui.frmDash..Enabled(False)
+				F.Intrinsic.String.Build("Edit Rate for: {0}", V.Local.sCellValue, V.Local.sMsg)
+				Gui.frmEdit.lblEditCaption.Caption(V.Local.sMsg)
+				
+				Gui.frmEdit..Show
+			F.Intrinsic.Control.EndIf
+			
+			F.Data.Dictionary.Close("dictFlags")
+	F.Intrinsic.Control.EndSelect
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsGCFreight_RowCellClick.End
+
+Program.Sub.cmdSave_Click.Start
+F.Intrinsic.Control.Try
+	F.Intrinsic.Control.If(V.Global.bViewOnly)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.SetValue("dtFreightRates", V.Global.iSelectedRowIndex, V.Global.sSelectedColumn, V.Screen.frmEdit!txtEdit.Text.Trim)
+	'Save back to db custom table 
+	F.ODBC.Connection!con.OpenCompanyConnection
+	V.Global.bConOpen.Set(True)
+	F.Data.DataTable.SaveToDB("dtFreightRates", "con", "GCG_6479_FREIGHT_RATES", "PLANT*!*CUSTOMER*!*ADDRESS1", 256, "PLANT@!@PLANT*!*CUSTOMER@!@CUSTOMER*!*ADDRESS1@!@ADDRESS1*!*LBS_1@!@LBS_1*!*LBS_2@!@LBS_2*!*LBS_3@!@LBS_3")
+	F.ODBC.Connection!con.Close
+	V.Global.bConOpen.Set(False)
+	
+	Gui.frmEdit..Visible(False)
+	Gui.frmDash..AlwaysOnTop(True)
+	Gui.frmDash..Enabled(True)
+	Gui.frmEdit.txtEdit.Text("")
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+Program.Sub.frmEdit_UnLoad.Start
+F.Intrinsic.Control.Try
+	Gui.frmEdit..Visible(False)
+	Gui.frmDash..AlwaysOnTop(True)
+	Gui.frmDash..Enabled(True)
+	GUi.frmEdit.txtEdit.Text("")
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.frmEdit_UnLoad.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$bmedina$}$20211231112941281$}$kOipCrsyLBVj2KoSwkcdK23ChxGVcBlEax/5vxf2VXYmTjLVpBEhuZ6ou1peXUB+v7YtjoBEWoI=
+Program.Sub.Comments.End
